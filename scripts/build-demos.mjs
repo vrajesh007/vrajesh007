@@ -1,5 +1,5 @@
 import { execFileSync } from 'node:child_process';
-import { existsSync, mkdirSync, rmSync, statSync, writeFileSync } from 'node:fs';
+import { mkdirSync, rmSync, statSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -62,6 +62,7 @@ function makeCircleMask(size, outPng) {
 }
 
 function encodeGifFromVideo(inputMov, outGif, attempts) {
+  const rawGif = join(TMP, 'raw.gif');
   for (const { fps, colors } of attempts) {
     const palette = join(TMP, 'palette.png');
     run('ffmpeg', [
@@ -69,7 +70,7 @@ function encodeGifFromVideo(inputMov, outGif, attempts) {
       '-i',
       inputMov,
       '-vf',
-      `fps=${fps},palettegen=max_colors=${colors}:stats_mode=diff`,
+      `fps=${fps},palettegen=max_colors=${colors}:stats_mode=diff:reserve_transparent=1`,
       palette,
     ]);
     run('ffmpeg', [
@@ -79,11 +80,12 @@ function encodeGifFromVideo(inputMov, outGif, attempts) {
       '-i',
       palette,
       '-lavfi',
-      `fps=${fps}[x];[x][1:v]paletteuse=dither=bayer:bayer_scale=3:diff_mode=rectangle`,
+      `fps=${fps}[x];[x][1:v]paletteuse=dither=bayer:bayer_scale=3:diff_mode=rectangle:alpha_threshold=128`,
       '-loop',
       '0',
-      outGif,
+      rawGif,
     ]);
+    run('magick', [rawGif, '-layers', 'Optimize', outGif]);
     const mb = statSync(outGif).size / (1024 * 1024);
     console.log(`  encoded ${outGif} @ ${fps}fps, ${colors} colors -> ${mb.toFixed(2)} MB`);
     if (mb <= 3.1) return;
@@ -101,12 +103,10 @@ function buildAudioRewind() {
   const fgPng = join(TMP, 'ar-fg.png');
   const watchMask = join(TMP, 'ar-watch-mask.png');
   const phoneMask = join(TMP, 'ar-phone-mask.png');
-  const compMp4 = join(TMP, 'ar-comp.mp4');
+  const compMov = join(TMP, 'ar-comp.mov');
 
-  // Watch: center (224, 174), outer 228x228, inner screen 204x204 at (122, 72)
-  // Phone: center (576, 174), outer 150x298 at (501, 25), inner screen 134x282 at (509, 33)
   renderStagePng(
-    `<!doctype html><html><body style="margin:0;width:${W}px;height:${H}px;overflow:hidden;background:#0D1117;">
+    `<!doctype html><html><body style="margin:0;width:${W}px;height:${H}px;overflow:hidden;background:transparent;">
       <svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">
         <defs>
           <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
@@ -126,7 +126,7 @@ function buildAudioRewind() {
             <stop offset="0%" stop-color="#252A26"/><stop offset="100%" stop-color="#161916"/>
           </linearGradient>
         </defs>
-        <rect x="0.5" y="0.5" width="${W - 1}" height="${H - 1}" rx="14" fill="url(#bg)" stroke="rgba(246,242,234,0.14)"/>
+        <rect x="0.5" y="0.5" width="${W - 1}" height="${H - 1}" rx="14" fill="url(#bg)" stroke="#2C2822"/>
         <rect x="0.5" y="0.5" width="${W - 1}" height="${H - 1}" rx="14" fill="url(#glow)"/>
 
         <!-- Watch straps, crown & button -->
@@ -153,9 +153,9 @@ function buildAudioRewind() {
     W,
     H,
     bgPng,
+    true,
   );
 
-  // Transparent foreground overlay (punch-hole camera + subtle watch rim sheen)
   renderStagePng(
     `<!doctype html><html><body style="margin:0;width:${W}px;height:${H}px;overflow:hidden;background:transparent;">
       <svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">
@@ -191,14 +191,14 @@ function buildAudioRewind() {
       '[0:v]format=rgba[b]',
       '[b][wc]overlay=122:72:shortest=1[s1]',
       '[s1][pc]overlay=509:33:shortest=1[s2]',
-      '[s2][5:v]overlay=0:0:shortest=1,format=yuv420p[out]',
+      '[s2][5:v]overlay=0:0:shortest=1,tpad=stop_mode=clone:stop_duration=1.5,format=rgba[out]',
     ].join(';'),
     '-map', '[out]',
-    '-t', '12',
-    compMp4,
+    '-c:v', 'png',
+    compMov,
   ]);
 
-  encodeGifFromVideo(compMp4, join(ASSETS, 'demo-audio-rewind.gif'), [
+  encodeGifFromVideo(compMov, join(ASSETS, 'demo-audio-rewind.gif'), [
     { fps: 8, colors: 192 },
     { fps: 7, colors: 160 },
     { fps: 6, colors: 128 },
@@ -216,17 +216,17 @@ function buildBrowserStage({ name, inputFile, ss, duration, speed, caption, outG
   const SH = 420;
   const bgPng = join(TMP, `${name}-bg.png`);
   const maskPng = join(TMP, `${name}-mask.png`);
-  const compMp4 = join(TMP, `${name}-comp.mp4`);
+  const compMov = join(TMP, `${name}-comp.mov`);
 
   renderStagePng(
-    `<!doctype html><html><body style="margin:0;width:${W}px;height:${H}px;overflow:hidden;background:#0D1117;">
+    `<!doctype html><html><body style="margin:0;width:${W}px;height:${H}px;overflow:hidden;background:transparent;">
       <svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">
         <defs>
           <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
             <stop offset="0%" stop-color="#1A1713"/><stop offset="100%" stop-color="#0B0A08"/>
           </linearGradient>
         </defs>
-        <rect x="0.5" y="0.5" width="${W - 1}" height="${H - 1}" rx="14" fill="url(#bg)" stroke="rgba(246,242,234,0.14)"/>
+        <rect x="0.5" y="0.5" width="${W - 1}" height="${H - 1}" rx="14" fill="url(#bg)" stroke="#2C2822"/>
         <rect x="16" y="12" width="${SW}" height="${SH}" rx="10" fill="#070706" stroke="rgba(255,255,255,0.1)"/>
         <text x="${W / 2}" y="446" text-anchor="middle" font-family="'SFMono-Regular',Consolas,Menlo,monospace" font-size="10.2" fill="#9E9586" letter-spacing="0.9">${caption}</text>
       </svg>
@@ -234,6 +234,7 @@ function buildBrowserStage({ name, inputFile, ss, duration, speed, caption, outG
     W,
     H,
     bgPng,
+    true,
   );
 
   makeRoundedMask(SW, SH, 10, maskPng);
@@ -250,14 +251,14 @@ function buildBrowserStage({ name, inputFile, ss, duration, speed, caption, outG
       '[2:v]format=gray[m]',
       '[v][m]alphamerge[vc]',
       '[0:v]format=rgba[b]',
-      '[b][vc]overlay=16:12:shortest=1,format=yuv420p[out]',
+      '[b][vc]overlay=16:12:shortest=1,tpad=stop_mode=clone:stop_duration=1.5,format=rgba[out]',
     ].join(';'),
     '-map', '[out]',
-    '-t', targetLen,
-    compMp4,
+    '-c:v', 'png',
+    compMov,
   ]);
 
-  encodeGifFromVideo(compMp4, join(ASSETS, outGif), [
+  encodeGifFromVideo(compMov, join(ASSETS, outGif), [
     { fps: 7, colors: 192 },
     { fps: 6, colors: 160 },
     { fps: 5, colors: 128 },
@@ -274,19 +275,17 @@ function buildMayTheJob() {
   const bgPng = join(TMP, 'mtj-bg.png');
   const spMask = join(TMP, 'mtj-sp-mask.png');
   const shotMask = join(TMP, 'mtj-shot-mask.png');
-  const compMp4 = join(TMP, 'mtj-comp.mp4');
+  const compMov = join(TMP, 'mtj-comp.mov');
 
-  // Side Panel: inner cropped video 156x348 at (26, 42), outer bezel (18, 16, 172x382)
-  // Companion shot: 576x360 at (206, 16), outer bezel (202, 12, 584x368)
   renderStagePng(
-    `<!doctype html><html><body style="margin:0;width:${W}px;height:${H}px;overflow:hidden;background:#0D1117;">
+    `<!doctype html><html><body style="margin:0;width:${W}px;height:${H}px;overflow:hidden;background:transparent;">
       <svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">
         <defs>
           <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
             <stop offset="0%" stop-color="#14120F"/><stop offset="100%" stop-color="#0B0A08"/>
           </linearGradient>
         </defs>
-        <rect x="0.5" y="0.5" width="${W - 1}" height="${H - 1}" rx="14" fill="url(#bg)" stroke="rgba(246,242,234,0.14)"/>
+        <rect x="0.5" y="0.5" width="${W - 1}" height="${H - 1}" rx="14" fill="url(#bg)" stroke="#2C2822"/>
 
         <!-- Left Chrome Side Panel frame -->
         <rect x="18" y="14" width="172" height="384" rx="14" fill="#1A1B1E" stroke="rgba(255,255,255,0.14)"/>
@@ -303,6 +302,7 @@ function buildMayTheJob() {
     W,
     H,
     bgPng,
+    true,
   );
 
   makeRoundedMask(156, 348, 8, spMask);
@@ -325,14 +325,14 @@ function buildMayTheJob() {
       '[sh][shm]alphamerge[shc]',
       '[0:v]format=rgba[b]',
       '[b][spc]overlay=26:42:shortest=1[s1]',
-      '[s1][shc]overlay=206:18:shortest=1,format=yuv420p[out]',
+      '[s1][shc]overlay=206:18:shortest=1,tpad=stop_mode=clone:stop_duration=1.5,format=rgba[out]',
     ].join(';'),
     '-map', '[out]',
-    '-t', '12',
-    compMp4,
+    '-c:v', 'png',
+    compMov,
   ]);
 
-  encodeGifFromVideo(compMp4, join(ASSETS, 'demo-may-the-job.gif'), [
+  encodeGifFromVideo(compMov, join(ASSETS, 'demo-may-the-job.gif'), [
     { fps: 8, colors: 192 },
     { fps: 7, colors: 160 },
     { fps: 6, colors: 128 },
@@ -361,4 +361,4 @@ buildBrowserStage({
 });
 
 rmSync(TMP, { recursive: true, force: true });
-console.log('Done building all 4 device-framed demo GIFs.');
+console.log('Done building all 4 polished demo GIFs.');
