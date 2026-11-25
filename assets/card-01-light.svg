@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="260" viewBox="0 0 420 260" role="img" aria-label="Audio Rewind — ANDROID · WEAR OS · AI">
+  <defs>
+    <linearGradient id="card-bg-01-light" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F7F2E8"/>
+      <stop offset="100%" stop-color="#F3EDE2"/>
+    </linearGradient>
+    <clipPath id="card-clip-01-light">
+      <rect x="0.5" y="0.5" width="419" height="259" rx="12"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#card-clip-01-light)">
+    <rect x="0" y="0" width="420" height="260" fill="url(#card-bg-01-light)"/>
+  </g>
+  <rect x="0.5" y="0.5" width="419" height="259" rx="12" fill="none" stroke="rgba(23, 21, 18, 0.14)" stroke-width="1"/>
+
+  <!-- Top metadata bar -->
+  <text x="24" y="34" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11.5" font-weight="600" fill="#9F5A18" letter-spacing="0.8">01</text>
+  <rect x="48" y="20" width="135" height="20" rx="10" fill="rgba(159, 90, 24, 0.10)" stroke="rgba(159, 90, 24, 0.28)" stroke-width="0.8"/>
+  <text x="115.5" y="33.5" text-anchor="middle" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="9.2" font-weight="600" fill="#8A4C12" letter-spacing="0.5">GOOGLE PLAY · LIVE</text>
+  <text x="396" y="33.5" text-anchor="end" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="9.5" fill="#6B6457" letter-spacing="0.7">PRIVATE SOURCE</text>
+
+  <!-- Title & category -->
+  <text x="24" y="76" font-family="Georgia, 'Times New Roman', Times, serif" font-size="24" font-weight="400" fill="#171512" letter-spacing="-0.4">Audio Rewind</text>
+  <text x="24" y="96" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="10" fill="#9F5A18" letter-spacing="0.9">ANDROID · WEAR OS · AI</text>
+
+  <!-- Two-line pitch -->
+  <text x="24" y="124" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" fill="#4A453D">Rolling 15s or 30s audio window in memory on Wear OS</text>
+  <text x="24" y="142" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" fill="#4A453D">and Android, ready to replay and transcribe.</text>
+
+  <line x1="24" y1="158" x2="396" y2="158" stroke="rgba(23, 21, 18, 0.11)" stroke-width="1"/>
+
+  <!-- 3-column invariants -->
+  <text x="24" y="180" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11.5" font-weight="600" fill="#9F5A18">15s / 30s</text>
+  <text x="24" y="197" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" fill="#6B6457">In-memory window</text>
+  <text x="152" y="180" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11.5" font-weight="600" fill="#9F5A18">Zero alloc</text>
+  <text x="152" y="197" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" fill="#6B6457">Preallocated buffer</text>
+  <text x="280" y="180" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11.5" font-weight="600" fill="#9F5A18">Watch + Phone</text>
+  <text x="280" y="197" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" fill="#6B6457">Either owns mic</text>
+
+  <line x1="24" y1="214" x2="396" y2="214" stroke="rgba(23, 21, 18, 0.11)" stroke-width="1"/>
+
+  <!-- Footer -->
+  <text x="24" y="238" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="10.2" fill="#6B6457">Kotlin · Wearable APIs · Device E2E</text>
+  <text x="396" y="238" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#9F5A18">Case study ↗</text>
+</svg>

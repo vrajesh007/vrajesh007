@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="248" viewBox="0 0 840 248" role="img" aria-label="Vrajesh Trivedi — Software built from the ground up, tested on real hardware, and shipped.">
+  <defs>
+    <linearGradient id="hero-bg-dark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#14120F"/>
+      <stop offset="100%" stop-color="#0B0A08"/>
+    </linearGradient>
+    <radialGradient id="hero-glow-dark" cx="0.08" cy="0.08" r="0.68">
+      <stop offset="0%" stop-color="#D4A359" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#D4A359" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="hero-clip-dark">
+      <rect x="0.5" y="0.5" width="839" height="247" rx="14"/>
+    </clipPath>
+    <style>
+      @keyframes pulseDot {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.32; }
+      }
+      @keyframes wavePulse {
+        0%, 100% { opacity: 0.22; }
+        50% { opacity: 0.72; }
+      }
+      .live-dot {
+        animation: pulseDot 2.8s ease-in-out infinite;
+      }
+      .wave-bar {
+        animation: wavePulse 3.2s ease-in-out infinite;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .live-dot, .wave-bar { animation: none; opacity: 0.55; }
+      }
+    </style>
+  </defs>
+
+  <g clip-path="url(#hero-clip-dark)">
+    <rect x="0" y="0" width="840" height="248" fill="url(#hero-bg-dark)"/>
+    <rect x="0" y="0" width="840" height="248" fill="url(#hero-glow-dark)"/>
+  </g>
+  <rect x="0.5" y="0.5" width="839" height="247" rx="14" fill="none" stroke="rgba(246, 242, 234, 0.14)" stroke-width="1"/>
+
+  <!-- Top header row -->
+  <circle cx="38" cy="36" r="4.5" fill="#D4A359"/>
+  <text x="52" y="41" font-family="Georgia, 'Times New Roman', Times, serif" font-size="18" fill="#F6F2EA" letter-spacing="-0.2">Vrajesh <tspan font-style="italic" fill="#D4A359">Trivedi</tspan></text>
+
+  <circle class="live-dot" cx="550" cy="36" r="3.5" fill="#D4A359"/>
+  <text x="562" y="40" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11" fill="#7D776C" letter-spacing="1.1">OPEN TO WORK · BENGALURU, INDIA</text>
+
+  <line x1="34" y1="60" x2="806" y2="60" stroke="rgba(246, 242, 234, 0.11)" stroke-width="1"/>
+
+  <!-- Editorial headline -->
+  <text x="34" y="114" font-family="Georgia, 'Times New Roman', Times, serif" font-size="35" font-weight="400" fill="#F6F2EA" letter-spacing="-0.8">Software built from the ground up,</text>
+  <text x="34" y="160" font-family="Georgia, 'Times New Roman', Times, serif" font-size="35" font-weight="400" fill="#F6F2EA" letter-spacing="-0.8"><tspan font-style="italic" fill="#D4A359">tested on real hardware</tspan>, and shipped.</text>
+
+  <!-- Subtle telemetry / waveform accent -->
+  <g>
+    <rect class="wave-bar" x="698" y="125" width="5" height="18" rx="2.5" fill="#D4A359" style="animation-delay: 0.00s" />
+    <rect class="wave-bar" x="712" y="117" width="5" height="34" rx="2.5" fill="#D4A359" style="animation-delay: 0.22s" />
+    <rect class="wave-bar" x="726" y="108" width="5" height="52" rx="2.5" fill="#D4A359" style="animation-delay: 0.44s" />
+    <rect class="wave-bar" x="740" y="120" width="5" height="28" rx="2.5" fill="#D4A359" style="animation-delay: 0.66s" />
+    <rect class="wave-bar" x="754" y="103" width="5" height="62" rx="2.5" fill="#D4A359" style="animation-delay: 0.88s" />
+    <rect class="wave-bar" x="768" y="114" width="5" height="40" rx="2.5" fill="#D4A359" style="animation-delay: 1.10s" />
+    <rect class="wave-bar" x="782" y="123" width="5" height="22" rx="2.5" fill="#D4A359" style="animation-delay: 1.32s" />
+  </g>
+
+  <line x1="34" y1="194" x2="806" y2="194" stroke="rgba(246, 242, 234, 0.11)" stroke-width="1"/>
+
+  <!-- Bottom strip -->
+  <text x="34" y="222" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11" fill="#7D776C" letter-spacing="0.9">ANDROID &amp; WEAR OS  ·  CHROME MV3  ·  AI TRANSCRIPTION  ·  LOCAL-FIRST</text>
+  <text x="806" y="222" text-anchor="end" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11" fill="#D4A359" letter-spacing="1.1">VRAJESHLABS.COM</text>
+</svg>

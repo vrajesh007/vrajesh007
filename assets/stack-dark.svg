@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="318" viewBox="0 0 840 318" role="img" aria-label="Capabilities, technical stack, and 7-step build process">
+  <defs>
+    <linearGradient id="stack-bg-dark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#14120F"/>
+      <stop offset="100%" stop-color="#0B0A08"/>
+    </linearGradient>
+    <clipPath id="stack-clip-dark">
+      <rect x="0.5" y="0.5" width="839" height="317" rx="14"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#stack-clip-dark)">
+    <rect x="0" y="0" width="840" height="318" fill="url(#stack-bg-dark)"/>
+  </g>
+  <rect x="0.5" y="0.5" width="839" height="317" rx="14" fill="none" stroke="rgba(246, 242, 234, 0.14)" stroke-width="1"/>
+
+  <text x="34" y="37" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11" font-weight="600" fill="#F6F2EA" letter-spacing="1.1">CAPABILITIES &amp; TECHNICAL STACK</text>
+  <text x="806" y="37" text-anchor="end" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="10.2" fill="#7D776C" letter-spacing="0.9">NO BACKEND BY DEFAULT · TESTED UNDER FAILURE</text>
+
+  <line x1="34" y1="54" x2="806" y2="54" stroke="rgba(246, 242, 234, 0.11)" stroke-width="1"/>
+
+  
+  <text x="34" y="82" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="10.5" font-weight="600" fill="#D4A359" letter-spacing="0.9">ANDROID &amp; WEAR OS</text>
+  <text x="34" y="108" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#B8B1A4">Kotlin &amp; Coroutines</text>
+  <text x="34" y="130" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#B8B1A4">Tiles &amp; Complications</text>
+  <text x="34" y="152" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#B8B1A4">Foreground Audio Services</text>
+  <text x="34" y="174" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#B8B1A4">Wearable Transport APIs</text>
+  <text x="34" y="196" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#B8B1A4">Preallocated Ring Buffers</text>
+  <text x="34" y="218" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#B8B1A4">Physical-Device E2E Suites</text>
+<line x1="216" y1="74" x2="216" y2="232" stroke="rgba(246, 242, 234, 0.11)" stroke-width="1"/>
+  <text x="230" y="82" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="10.5" font-weight="600" fill="#D4A359" letter-spacing="0.9">BROWSER &amp; MV3</text>
+  <text x="230" y="108" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#B8B1A4">TypeScript &amp; JavaScript</text>
+  <text x="230" y="130" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#B8B1A4">Chrome Manifest V3</text>
+  <text x="230" y="152" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#B8B1A4">Side Panel API</text>
+  <text x="230" y="174" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#B8B1A4">Service Worker Lifecycle</text>
+  <text x="230" y="196" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#B8B1A4">Isolated DOM Adapters</text>
+  <text x="230" y="218" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#B8B1A4">Locale-Safe Selectors</text>
+<line x1="412" y1="74" x2="412" y2="232" stroke="rgba(246, 242, 234, 0.11)" stroke-width="1"/>
+  <text x="426" y="82" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="10.5" font-weight="600" fill="#D4A359" letter-spacing="0.9">LOCAL-FIRST DATA</text>
+  <text x="426" y="108" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#B8B1A4">IndexedDB &amp; Dexie</text>
+  <text x="426" y="130" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#B8B1A4">Explicit Schema Migrations</text>
+  <text x="426" y="152" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#B8B1A4">Per-Photo Readback Ledgers</text>
+  <text x="426" y="174" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#B8B1A4">Step-Level Checkpoints</text>
+  <text x="426" y="196" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#B8B1A4">Export / Import Durability</text>
+  <text x="426" y="218" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#B8B1A4">Zero-Server Privacy Model</text>
+<line x1="608" y1="74" x2="608" y2="232" stroke="rgba(246, 242, 234, 0.11)" stroke-width="1"/>
+  <text x="622" y="82" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="10.5" font-weight="600" fill="#D4A359" letter-spacing="0.9">TESTING &amp; DELIVERY</text>
+  <text x="622" y="108" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#B8B1A4">Playwright E2E Harnesses</text>
+  <text x="622" y="130" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#B8B1A4">Protocol Mutation Testing</text>
+  <text x="622" y="152" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#B8B1A4">Failure Injection Suites</text>
+  <text x="622" y="174" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#B8B1A4">Astro 5 &amp; Vite</text>
+  <text x="622" y="196" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#B8B1A4">Cloudflare Pages</text>
+  <text x="622" y="218" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#B8B1A4">Play &amp; Web Store Releases</text>
+
+  <line x1="34" y1="252" x2="806" y2="252" stroke="rgba(246, 242, 234, 0.11)" stroke-width="1"/>
+
+  <text x="34" y="284" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="10.2" font-weight="600" fill="#7D776C" letter-spacing="1">HOW I BUILD</text>
+  <text x="136" y="284" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="10.5" fill="#D4A359">01</text>
+  <text x="155" y="284" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="500" fill="#F6F2EA">Problem</text>
+  <text x="210" y="284" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11" fill="#7D776C">→</text>
+  <text x="232" y="284" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="10.5" fill="#D4A359">02</text>
+  <text x="251" y="284" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="500" fill="#F6F2EA">Product</text>
+  <text x="306" y="284" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11" fill="#7D776C">→</text>
+  <text x="328" y="284" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="10.5" fill="#D4A359">03</text>
+  <text x="347" y="284" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="500" fill="#F6F2EA">Architecture</text>
+  <text x="426" y="284" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11" fill="#7D776C">→</text>
+  <text x="448" y="284" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="10.5" fill="#D4A359">04</text>
+  <text x="467" y="284" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="500" fill="#F6F2EA">Build</text>
+  <text x="506" y="284" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11" fill="#7D776C">→</text>
+  <text x="528" y="284" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="10.5" fill="#D4A359">05</text>
+  <text x="547" y="284" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="500" fill="#F6F2EA">Test</text>
+  <text x="582" y="284" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11" fill="#7D776C">→</text>
+  <text x="604" y="284" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="10.5" fill="#D4A359">06</text>
+  <text x="623" y="284" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="500" fill="#F6F2EA">Ship</text>
+  <text x="660" y="284" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11" fill="#7D776C">→</text>
+  <text x="682" y="284" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="10.5" fill="#D4A359">07</text>
+  <text x="701" y="284" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="500" fill="#F6F2EA">Improve</text>
+  
+</svg>

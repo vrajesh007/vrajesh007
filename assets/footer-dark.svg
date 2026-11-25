@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="76" viewBox="0 0 840 76" role="img" aria-label="Under this sky, I dream. Then I build. — vrajeshlabs.com">
+  <defs>
+    <linearGradient id="footer-bg-dark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#14120F"/>
+      <stop offset="100%" stop-color="#0B0A08"/>
+    </linearGradient>
+    <clipPath id="footer-clip-dark">
+      <rect x="0.5" y="0.5" width="839" height="75" rx="12"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#footer-clip-dark)">
+    <rect x="0" y="0" width="840" height="76" fill="url(#footer-bg-dark)"/>
+  </g>
+  <rect x="0.5" y="0.5" width="839" height="75" rx="12" fill="none" stroke="rgba(246, 242, 234, 0.14)" stroke-width="1"/>
+
+  <circle cx="34" cy="38" r="4" fill="#D4A359"/>
+  <text x="48" y="43" font-family="Georgia, 'Times New Roman', Times, serif" font-size="17" font-style="italic" fill="#F6F2EA">Under this sky, I dream. <tspan fill="#D4A359">Then I build.</tspan></text>
+  <text x="806" y="42" text-anchor="end" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="10.5" fill="#7D776C" letter-spacing="0.8">VRAJESHLABS.COM · TRIVEDI.VRAJESH2597@GMAIL.COM</text>
+</svg>
