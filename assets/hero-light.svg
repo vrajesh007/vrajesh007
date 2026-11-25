@@ -1,72 +1,97 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="840" height="248" viewBox="0 0 840 248" role="img" aria-label="Vrajesh Trivedi — Software built from the ground up, tested on real hardware, and shipped.">
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="254" viewBox="0 0 840 254" role="img" aria-label="Vrajesh Trivedi — Software built from the ground up, tested on real hardware, and shipped.">
   <defs>
     <linearGradient id="hero-bg-light" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#F7F2E8"/>
-      <stop offset="100%" stop-color="#F3EDE2"/>
+      <stop offset="0%" stop-color="#F5F8FF"/>
+      <stop offset="52%" stop-color="#EEF2FF"/>
+      <stop offset="100%" stop-color="#F4F1FF"/>
     </linearGradient>
-    <radialGradient id="hero-glow-light" cx="0.08" cy="0.08" r="0.68">
-      <stop offset="0%" stop-color="#9F5A18" stop-opacity="0.10"/>
-      <stop offset="100%" stop-color="#9F5A18" stop-opacity="0"/>
+    <radialGradient id="hero-glow-cyan-light" cx="0.15" cy="0.15" r="0.60">
+      <stop offset="0%" stop-color="#0EA5E9" stop-opacity="0.11"/>
+      <stop offset="100%" stop-color="#0EA5E9" stop-opacity="0"/>
     </radialGradient>
+    <radialGradient id="hero-glow-violet-light" cx="0.85" cy="0.82" r="0.62">
+      <stop offset="0%" stop-color="#7C3AED" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#7C3AED" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="hero-aurora-light" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0284C7"/>
+      <stop offset="55%" stop-color="#4F46E5"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
     <clipPath id="hero-clip-light">
-      <rect x="0.5" y="0.5" width="839" height="247" rx="14"/>
+      <rect x="0.5" y="0.5" width="839" height="253" rx="14"/>
     </clipPath>
     <style>
       @keyframes pulseDot {
         0%, 100% { opacity: 1; }
-        50% { opacity: 0.32; }
+        50% { opacity: 0.35; }
       }
-      @keyframes wavePulse {
-        0%, 100% { opacity: 0.22; }
-        50% { opacity: 0.72; }
+      @keyframes syncPulse {
+        0%, 100% { opacity: 0.35; }
+        50% { opacity: 0.95; }
       }
       .live-dot {
         animation: pulseDot 2.8s ease-in-out infinite;
       }
-      .wave-bar {
-        animation: wavePulse 3.2s ease-in-out infinite;
+      .sync-link {
+        animation: syncPulse 2.6s ease-in-out infinite;
       }
       @media (prefers-reduced-motion: reduce) {
-        .live-dot, .wave-bar { animation: none; opacity: 0.55; }
+        .live-dot, .sync-link { animation: none; opacity: 0.75; }
       }
     </style>
   </defs>
 
   <g clip-path="url(#hero-clip-light)">
-    <rect x="0" y="0" width="840" height="248" fill="url(#hero-bg-light)"/>
-    <rect x="0" y="0" width="840" height="248" fill="url(#hero-glow-light)"/>
+    <rect x="0" y="0" width="840" height="254" fill="url(#hero-bg-light)"/>
+    <rect x="0" y="0" width="840" height="254" fill="url(#hero-glow-cyan-light)"/>
+    <rect x="0" y="0" width="840" height="254" fill="url(#hero-glow-violet-light)"/>
   </g>
-  <rect x="0.5" y="0.5" width="839" height="247" rx="14" fill="none" stroke="rgba(23, 21, 18, 0.14)" stroke-width="1"/>
+  <rect x="0.5" y="0.5" width="839" height="253" rx="14" fill="none" stroke="url(#hero-aurora-light)" stroke-opacity="0.35" stroke-width="1"/>
 
   <!-- Top header row -->
-  <circle cx="38" cy="36" r="4.5" fill="#9F5A18"/>
-  <text x="52" y="41" font-family="Georgia, 'Times New Roman', Times, serif" font-size="18" fill="#171512" letter-spacing="-0.2">Vrajesh <tspan font-style="italic" fill="#9F5A18">Trivedi</tspan></text>
-  <line x1="186" y1="27" x2="186" y2="45" stroke="rgba(23, 21, 18, 0.11)" stroke-width="1"/>
-  <text x="198" y="40" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="10.2" fill="#6B6457" letter-spacing="0.9">8+ YRS ON GITHUB · SINCE 2018</text>
+  <circle cx="38" cy="36" r="4.5" fill="#0284C7"/>
+  <text x="52" y="41" font-family="Georgia, 'Times New Roman', Times, serif" font-size="18" fill="#0F172A" letter-spacing="-0.2">Vrajesh <tspan font-style="italic" fill="#0284C7">Trivedi</tspan></text>
+  <line x1="186" y1="27" x2="186" y2="45" stroke="rgba(15, 23, 42, 0.14)" stroke-width="1"/>
+  <text x="198" y="40" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="10.2" fill="#4F46E5" letter-spacing="0.9">8+ YRS ON GITHUB · SINCE 2018</text>
 
-  <circle class="live-dot" cx="550" cy="36" r="3.5" fill="#9F5A18"/>
-  <text x="562" y="40" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11" fill="#6B6457" letter-spacing="1.1">OPEN TO WORK · BENGALURU, INDIA</text>
+  <circle class="live-dot" cx="556" cy="36" r="3.5" fill="#10B981"/>
+  <text x="568" y="40" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="10.6" fill="#334155" letter-spacing="1.0">OPEN TO WORK · BENGALURU, INDIA</text>
 
-  <line x1="34" y1="60" x2="806" y2="60" stroke="rgba(23, 21, 18, 0.11)" stroke-width="1"/>
+  <line x1="34" y1="60" x2="806" y2="60" stroke="rgba(15, 23, 42, 0.10)" stroke-width="1"/>
 
   <!-- Editorial headline -->
-  <text x="34" y="114" font-family="Georgia, 'Times New Roman', Times, serif" font-size="35" font-weight="400" fill="#171512" letter-spacing="-0.8">Software built from the ground up,</text>
-  <text x="34" y="160" font-family="Georgia, 'Times New Roman', Times, serif" font-size="35" font-weight="400" fill="#171512" letter-spacing="-0.8"><tspan font-style="italic" fill="#9F5A18">tested on real hardware</tspan>, and shipped.</text>
+  <text x="34" y="108" font-family="Georgia, 'Times New Roman', Times, serif" font-size="31.5" font-weight="400" fill="#0F172A" letter-spacing="-0.6">Software built from the</text>
+  <text x="34" y="146" font-family="Georgia, 'Times New Roman', Times, serif" font-size="31.5" font-weight="400" fill="#0F172A" letter-spacing="-0.6">ground up, <tspan font-style="italic" fill="url(#hero-aurora-light)">tested on real</tspan></text>
+  <text x="34" y="184" font-family="Georgia, 'Times New Roman', Times, serif" font-size="31.5" font-weight="400" fill="#0F172A" letter-spacing="-0.6"><tspan font-style="italic" fill="url(#hero-aurora-light)">hardware</tspan>, and shipped.</text>
 
-  <!-- Subtle telemetry / waveform accent -->
-  <g>
-    <rect class="wave-bar" x="698" y="125" width="5" height="18" rx="2.5" fill="#9F5A18" style="animation-delay: 0.00s" />
-    <rect class="wave-bar" x="712" y="117" width="5" height="34" rx="2.5" fill="#9F5A18" style="animation-delay: 0.22s" />
-    <rect class="wave-bar" x="726" y="108" width="5" height="52" rx="2.5" fill="#9F5A18" style="animation-delay: 0.44s" />
-    <rect class="wave-bar" x="740" y="120" width="5" height="28" rx="2.5" fill="#9F5A18" style="animation-delay: 0.66s" />
-    <rect class="wave-bar" x="754" y="103" width="5" height="62" rx="2.5" fill="#9F5A18" style="animation-delay: 0.88s" />
-    <rect class="wave-bar" x="768" y="114" width="5" height="40" rx="2.5" fill="#9F5A18" style="animation-delay: 1.10s" />
-    <rect class="wave-bar" x="782" y="123" width="5" height="22" rx="2.5" fill="#9F5A18" style="animation-delay: 1.32s" />
-  </g>
+  <!-- Architectural device blueprint: Wear OS ↔ Android + Chrome MV3 Side Panel -->
+  <rect x="583" y="92" width="18" height="7" rx="2" fill="none" stroke="rgba(2, 132, 199, 0.45)" stroke-width="1"/>
+  <rect x="583" y="141" width="18" height="7" rx="2" fill="none" stroke="rgba(2, 132, 199, 0.45)" stroke-width="1"/>
+  <circle cx="592" cy="120" r="21" fill="rgba(255, 255, 255, 0.80)" stroke="url(#hero-aurora-light)" stroke-width="1.2"/>
+  <circle cx="592" cy="120" r="15.5" fill="none" stroke="rgba(2, 132, 199, 0.35)" stroke-width="0.9"/>
+  <line x1="613" y1="117" x2="615" y2="123" stroke="#0284C7" stroke-width="1.6" stroke-linecap="round"/>
+  <text x="592" y="170" text-anchor="middle" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="8.6" fill="#475569" letter-spacing="0.8">WEAR OS</text>
 
-  <line x1="34" y1="194" x2="806" y2="194" stroke="rgba(23, 21, 18, 0.11)" stroke-width="1"/>
+  <line class="sync-link" x1="619" y1="120" x2="638" y2="120" stroke="#4F46E5" stroke-width="1" stroke-dasharray="2.5 3"/>
+
+  <rect x="642" y="88" width="38" height="64" rx="7" fill="rgba(255, 255, 255, 0.80)" stroke="url(#hero-aurora-light)" stroke-width="1.2"/>
+  <rect x="645.5" y="93" width="31" height="54" rx="4" fill="none" stroke="rgba(79, 70, 229, 0.28)" stroke-width="0.8"/>
+  <circle cx="661" cy="96.5" r="1.2" fill="#0284C7"/>
+  <text x="661" y="170" text-anchor="middle" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="8.6" fill="#475569" letter-spacing="0.8">ANDROID</text>
+
+  <rect x="698" y="88" width="106" height="64" rx="7" fill="rgba(255, 255, 255, 0.80)" stroke="url(#hero-aurora-light)" stroke-width="1.2"/>
+  <line x1="698" y1="99" x2="804" y2="99" stroke="rgba(79, 70, 229, 0.28)" stroke-width="0.9"/>
+  <circle cx="706" cy="93.5" r="1.3" fill="#0284C7" opacity="0.75"/>
+  <circle cx="712" cy="93.5" r="1.3" fill="#4F46E5" opacity="0.75"/>
+  <circle cx="718" cy="93.5" r="1.3" fill="#7C3AED" opacity="0.75"/>
+  <rect x="771" y="99" width="33" height="53" rx="0" fill="rgba(79, 70, 229, 0.11)"/>
+  <line x1="771" y1="99" x2="771" y2="152" stroke="url(#hero-aurora-light)" stroke-width="1"/>
+  <text x="751" y="170" text-anchor="middle" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="8.6" fill="#475569" letter-spacing="0.8">CHROME MV3</text>
+
+  <line x1="34" y1="202" x2="806" y2="202" stroke="rgba(15, 23, 42, 0.10)" stroke-width="1"/>
 
   <!-- Bottom strip -->
-  <text x="34" y="222" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11" fill="#6B6457" letter-spacing="0.9">ANDROID &amp; WEAR OS  ·  CHROME MV3  ·  AI TRANSCRIPTION  ·  LOCAL-FIRST</text>
-  <text x="806" y="222" text-anchor="end" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11" fill="#9F5A18" letter-spacing="1.1">VRAJESHLABS.COM</text>
+  <text x="34" y="230" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="10.8" fill="#475569" letter-spacing="0.9">ANDROID &amp; WEAR OS  ·  CHROME MV3  ·  AI TRANSCRIPTION  ·  LOCAL-FIRST</text>
+  <text x="806" y="230" text-anchor="end" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11" font-weight="600" fill="#4338CA" letter-spacing="1.1">VRAJESHLABS.COM</text>
 </svg>

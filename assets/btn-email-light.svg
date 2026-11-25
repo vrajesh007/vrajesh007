@@ -1,4 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="92" height="34" viewBox="0 0 92 34" role="img" aria-label="Email Vrajesh Trivedi">
-  <rect x="0.5" y="0.5" width="91" height="33" rx="16.5" fill="#FFFFFF" stroke="#CBC2B2" stroke-width="1"/>
-  <text x="46" y="21.5" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="500" fill="#171512" letter-spacing="0.1">Email</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="98" height="36" viewBox="0 0 98 36" role="img" aria-label="Email Vrajesh Trivedi">
+  
+  <rect x="0.5" y="0.5" width="97" height="35" rx="17.5" fill="#FFFFFF" stroke="rgba(79, 70, 229, 0.24)" stroke-width="1"/>
+  <svg x="14" y="10.5" width="15" height="15" viewBox="0 0 24 24" fill="#4F46E5"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2Zm0 4-8 5-8-5V6l8 5 8-5v2Z"/></svg>
+  <text x="59.5" y="22.5" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="500" fill="#0F172A" letter-spacing="0.1">Email</text>
 </svg>

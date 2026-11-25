@@ -1,4 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="108" height="34" viewBox="0 0 108 34" role="img" aria-label="Vrajesh Trivedi on YouTube">
-  <rect x="0.5" y="0.5" width="107" height="33" rx="16.5" fill="#14120F" stroke="#3B352C" stroke-width="1"/>
-  <text x="54" y="21.5" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="500" fill="#F6F2EA" letter-spacing="0.1">YouTube</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="114" height="36" viewBox="0 0 114 36" role="img" aria-label="Vrajesh Trivedi on YouTube">
+  
+  <rect x="0.5" y="0.5" width="113" height="35" rx="17.5" fill="#0F152B" stroke="rgba(129, 140, 248, 0.34)" stroke-width="1"/>
+  <svg x="14" y="10.5" width="15" height="15" viewBox="0 0 24 24" fill="#F87171"><path d="M21.58 7.19a2.75 2.75 0 0 0-1.94-1.94C17.93 4.8 12 4.8 12 4.8s-5.93 0-7.64.45a2.75 2.75 0 0 0-1.94 1.94A28.7 28.7 0 0 0 2 12a28.7 28.7 0 0 0 .42 4.81 2.75 2.75 0 0 0 1.94 1.94c1.71.45 7.64.45 7.64.45s5.93 0 7.64-.45a2.75 2.75 0 0 0 1.94-1.94A28.7 28.7 0 0 0 22 12a28.7 28.7 0 0 0-.42-4.81ZM10 15.08V8.92L15.27 12 10 15.08Z"/></svg>
+  <text x="67.5" y="22.5" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="500" fill="#E2E8F0" letter-spacing="0.1">YouTube</text>
 </svg>

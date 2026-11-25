@@ -1,4 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="108" height="34" viewBox="0 0 108 34" role="img" aria-label="Vrajesh Trivedi on LinkedIn">
-  <rect x="0.5" y="0.5" width="107" height="33" rx="16.5" fill="#14120F" stroke="#3B352C" stroke-width="1"/>
-  <text x="54" y="21.5" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="500" fill="#F6F2EA" letter-spacing="0.1">LinkedIn</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="114" height="36" viewBox="0 0 114 36" role="img" aria-label="Vrajesh Trivedi on LinkedIn">
+  
+  <rect x="0.5" y="0.5" width="113" height="35" rx="17.5" fill="#0F152B" stroke="rgba(129, 140, 248, 0.34)" stroke-width="1"/>
+  <svg x="14" y="10.5" width="15" height="15" viewBox="0 0 24 24" fill="#38BDF8"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77Z"/></svg>
+  <text x="67.5" y="22.5" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="500" fill="#E2E8F0" letter-spacing="0.1">LinkedIn</text>
 </svg>
