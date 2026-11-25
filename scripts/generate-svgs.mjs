@@ -75,8 +75,18 @@ function writeSvg(filename, content) {
   writeFileSync(join(ASSETS_DIR, filename), content.trim() + '\n', 'utf8');
 }
 
+function getAccountYears(now = new Date()) {
+  const created = { year: 2018, month: 9, day: 9 };
+  let years = now.getUTCFullYear() - created.year;
+  const m = now.getUTCMonth() + 1;
+  const d = now.getUTCDate();
+  if (m < created.month || (m === created.month && d < created.day)) years -= 1;
+  return Math.max(1, years);
+}
+
 function renderHero(themeName) {
   const t = THEMES[themeName];
+  const accountYears = getAccountYears();
   const waveHeights = [18, 34, 52, 28, 62, 40, 22];
   const waveBars = waveHeights
     .map((h, i) => {
@@ -130,6 +140,8 @@ function renderHero(themeName) {
   <!-- Top header row -->
   <circle cx="38" cy="36" r="4.5" fill="${t.accent}"/>
   <text x="52" y="41" font-family="${FONTS.serif}" font-size="18" fill="${t.ink}" letter-spacing="-0.2">Vrajesh <tspan font-style="italic" fill="${t.accent}">Trivedi</tspan></text>
+  <line x1="186" y1="27" x2="186" y2="45" stroke="${t.divider}" stroke-width="1"/>
+  <text x="198" y="40" font-family="${FONTS.mono}" font-size="10.2" fill="${t.muted}" letter-spacing="0.9">${accountYears}+ YRS ON GITHUB · SINCE 2018</text>
 
   <circle class="live-dot" cx="550" cy="36" r="3.5" fill="${t.liveDot}"/>
   <text x="562" y="40" font-family="${FONTS.mono}" font-size="11" fill="${t.muted}" letter-spacing="1.1">OPEN TO WORK · BENGALURU, INDIA</text>

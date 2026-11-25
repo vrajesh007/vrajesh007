@@ -41,6 +41,8 @@
   <!-- Top header row -->
   <circle cx="38" cy="36" r="4.5" fill="#D4A359"/>
   <text x="52" y="41" font-family="Georgia, 'Times New Roman', Times, serif" font-size="18" fill="#F6F2EA" letter-spacing="-0.2">Vrajesh <tspan font-style="italic" fill="#D4A359">Trivedi</tspan></text>
+  <line x1="186" y1="27" x2="186" y2="45" stroke="rgba(246, 242, 234, 0.11)" stroke-width="1"/>
+  <text x="198" y="40" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="10.2" fill="#7D776C" letter-spacing="0.9">8+ YRS ON GITHUB · SINCE 2018</text>
 
   <circle class="live-dot" cx="550" cy="36" r="3.5" fill="#D4A359"/>
   <text x="562" y="40" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11" fill="#7D776C" letter-spacing="1.1">OPEN TO WORK · BENGALURU, INDIA</text>

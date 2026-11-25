@@ -1,0 +1,36 @@
+name: Refresh GitHub Account Age
+
+on:
+  schedule:
+    - cron: '0 0 9 9 *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh-age:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Regenerate profile SVGs
+        run: node scripts/generate-svgs.mjs
+
+      - name: Commit and push if changed
+        run: |
+          if git diff --quiet assets/; then
+            echo "No SVG changes."
+            exit 0
+          fi
+          git config user.name "Vrajesh Trivedi"
+          git config user.email "43109780+vrajesh007@users.noreply.github.com"
+          git add assets/
+          git commit -m "Update GitHub account age in hero banner"
+          git push
