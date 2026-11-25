@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="118" viewBox="0 0 840 118" role="img" aria-label="GPhotos Unleashed — CHROME EXTENSION · LOCAL-FIRST">
+  <defs>
+    <linearGradient id="ch-bg-02-dark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#14120F"/>
+      <stop offset="100%" stop-color="#0B0A08"/>
+    </linearGradient>
+    <clipPath id="ch-clip-02-dark">
+      <rect x="0.5" y="0.5" width="839" height="117" rx="12"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#ch-clip-02-dark)">
+    <rect x="0" y="0" width="840" height="118" fill="url(#ch-bg-02-dark)"/>
+  </g>
+  <rect x="0.5" y="0.5" width="839" height="117" rx="12" fill="none" stroke="rgba(246, 242, 234, 0.14)" stroke-width="1"/>
+
+  <!-- Top metadata bar -->
+  <text x="26" y="29" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11.5" font-weight="600" fill="#D4A359" letter-spacing="0.8">02</text>
+  <rect x="52" y="15" width="161" height="20" rx="10" fill="rgba(212, 163, 89, 0.14)" stroke="rgba(212, 163, 89, 0.34)" stroke-width="0.8"/>
+  <text x="132.5" y="28.5" text-anchor="middle" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="9.2" font-weight="600" fill="#E2B770" letter-spacing="0.5">CWS · V1.1.0 CANDIDATE</text>
+  <text x="227" y="28.5" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="10" fill="#7D776C" letter-spacing="0.8">CHROME EXTENSION · LOCAL-FIRST</text>
+  <text x="814" y="28.5" text-anchor="end" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="9.5" fill="#7D776C" letter-spacing="0.7">PRIVATE SOURCE</text>
+
+  <line x1="26" y1="43" x2="814" y2="43" stroke="rgba(246, 242, 234, 0.11)" stroke-width="1"/>
+
+  <!-- Title + 1-line pitch -->
+  <text x="26" y="72" font-family="Georgia, 'Times New Roman', Times, serif" font-size="22.5" font-weight="400" fill="#F6F2EA" letter-spacing="-0.4">GPhotos Unleashed</text>
+  <text x="26" y="95" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#B8B1A4">Exact-photo previews, confirmed batches, and verified recovery receipts.</text>
+
+  <!-- Vertical divider + 3-column invariant strip -->
+  <line x1="494" y1="54" x2="494" y2="102" stroke="rgba(246, 242, 234, 0.11)" stroke-width="1"/>
+  <text x="510" y="72" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11.2" font-weight="600" fill="#D4A359">9 src · 23 ops</text>
+  <text x="510" y="91" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" fill="#7D776C">Preview first</text>
+  <text x="616" y="72" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11.2" font-weight="600" fill="#D4A359">IndexedDB</text>
+  <text x="616" y="91" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" fill="#7D776C">Readback undo</text>
+  <text x="722" y="72" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11.2" font-weight="600" fill="#D4A359">1M-item gate</text>
+  <text x="722" y="91" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" fill="#7D776C">Bounded queue</text>
+</svg>

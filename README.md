@@ -14,22 +14,53 @@ I take products from an initial problem through architecture, implementation, re
 
 ### Shipped & Active Products
 
-*Source repositories for these products remain private. Full architecture breakdowns, failure-mode test suites, and real-device recordings are published in each case study on [vrajeshlabs.com](https://vrajeshlabs.com).*
+*Source repositories for these products remain private. All demos below are real hardware and browser captures; full architecture breakdowns and failure-mode test suites are published on [vrajeshlabs.com](https://vrajeshlabs.com).*
 
 <p align="center">
-  <a href="https://vrajeshlabs.com/projects/audio-rewind/"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/card-01-dark.svg" /><source media="(prefers-color-scheme: light)" srcset="./assets/card-01-light.svg" /><img src="./assets/card-01-dark.svg" width="410" alt="Audio Rewind — Android, Wear OS, AI" /></picture></a>&nbsp;<a href="https://vrajeshlabs.com/projects/gphotos-unleashed/"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/card-02-dark.svg" /><source media="(prefers-color-scheme: light)" srcset="./assets/card-02-light.svg" /><img src="./assets/card-02-dark.svg" width="410" alt="GPhotos Unleashed — Chrome Extension, Local-first" /></picture></a>
+  <a href="https://vrajeshlabs.com/projects/audio-rewind/"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/chapter-01-dark.svg" /><source media="(prefers-color-scheme: light)" srcset="./assets/chapter-01-light.svg" /><img src="./assets/chapter-01-dark.svg" width="100%" alt="01 — Audio Rewind" /></picture></a>
+  <br />
+  <a href="https://vrajeshlabs.com/projects/audio-rewind/"><img src="./assets/demo-audio-rewind.gif" width="100%" alt="Audio Rewind live demo on Pixel Watch 4 (45mm) and Pixel 10 Pro" /></a>
 </p>
 
 <p align="center">
-  <a href="https://vrajeshlabs.com/projects/may-the-job-be-with-you/"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/card-03-dark.svg" /><source media="(prefers-color-scheme: light)" srcset="./assets/card-03-light.svg" /><img src="./assets/card-03-dark.svg" width="410" alt="May The Job Be With You — Chrome Extension, TypeScript" /></picture></a>&nbsp;<a href="https://vrajeshlabs.com/projects/bulk-unsaver-for-insta/"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/card-04-dark.svg" /><source media="(prefers-color-scheme: light)" srcset="./assets/card-04-light.svg" /><img src="./assets/card-04-dark.svg" width="410" alt="Bulk Unsaver for Insta — Chrome Extension, Browser Automation" /></picture></a>
+  <sub><code>Kotlin · Wearable APIs · Device E2E</code> &nbsp;·&nbsp; <a href="https://vrajeshlabs.com/projects/audio-rewind/"><strong>Read Case Study →</strong></a> &nbsp;·&nbsp; <a href="https://play.google.com/store/apps/details?id=com.audiorewind.watch"><strong>Google Play ↗</strong></a></sub>
 </p>
 
-| Product | Platform | Status | Links |
-| :--- | :--- | :--- | :--- |
-| **Audio Rewind** | Android & Wear OS | Live | [Case Study](https://vrajeshlabs.com/projects/audio-rewind/) · [Google Play](https://play.google.com/store/apps/details?id=com.audiorewind.watch) |
-| **GPhotos Unleashed** | Chrome Extension (MV3) | v1.1.0 Candidate | [Case Study](https://vrajeshlabs.com/projects/gphotos-unleashed/) · CWS submission pending |
-| **May The Job Be With You** | Chrome Extension + Web | In Progress | [Case Study](https://vrajeshlabs.com/projects/may-the-job-be-with-you/) · [maythejobbewithyou.in](https://maythejobbewithyou.in) |
-| **Bulk Unsaver for Insta** | Chrome Extension (MV3) | Live | [Case Study](https://vrajeshlabs.com/projects/bulk-unsaver-for-insta/) · [Chrome Web Store](https://chromewebstore.google.com/detail/bulk-unsaver-for-insta/jkkbfimmfiegakhkknnlolfgkhljggai) |
+<br />
+
+<p align="center">
+  <a href="https://vrajeshlabs.com/projects/gphotos-unleashed/"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/chapter-02-dark.svg" /><source media="(prefers-color-scheme: light)" srcset="./assets/chapter-02-light.svg" /><img src="./assets/chapter-02-dark.svg" width="100%" alt="02 — GPhotos Unleashed" /></picture></a>
+  <br />
+  <a href="https://vrajeshlabs.com/projects/gphotos-unleashed/"><img src="./assets/demo-gphotos-unleashed.gif" width="100%" alt="GPhotos Unleashed live demo running beside Google Photos" /></a>
+</p>
+
+<p align="center">
+  <sub><code>JavaScript · MV3 · IndexedDB · Playwright</code> &nbsp;·&nbsp; <a href="https://vrajeshlabs.com/projects/gphotos-unleashed/"><strong>Read Case Study →</strong></a> &nbsp;·&nbsp; Chrome Web Store submission pending (v1.1.0 Candidate)</sub>
+</p>
+
+<br />
+
+<p align="center">
+  <a href="https://vrajeshlabs.com/projects/may-the-job-be-with-you/"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/chapter-03-dark.svg" /><source media="(prefers-color-scheme: light)" srcset="./assets/chapter-03-light.svg" /><img src="./assets/chapter-03-dark.svg" width="100%" alt="03 — May The Job Be With You" /></picture></a>
+  <br />
+  <a href="https://vrajeshlabs.com/projects/may-the-job-be-with-you/"><img src="./assets/demo-may-the-job.gif" width="100%" alt="May The Job Be With You Chrome Side Panel running beside LinkedIn Easy Apply" /></a>
+</p>
+
+<p align="center">
+  <sub><code>TypeScript · MV3 · Vite · Dexie</code> &nbsp;·&nbsp; <a href="https://vrajeshlabs.com/projects/may-the-job-be-with-you/"><strong>Read Case Study →</strong></a> &nbsp;·&nbsp; <a href="https://maythejobbewithyou.in"><strong>maythejobbewithyou.in ↗</strong></a></sub>
+</p>
+
+<br />
+
+<p align="center">
+  <a href="https://vrajeshlabs.com/projects/bulk-unsaver-for-insta/"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/chapter-04-dark.svg" /><source media="(prefers-color-scheme: light)" srcset="./assets/chapter-04-light.svg" /><img src="./assets/chapter-04-dark.svg" width="100%" alt="04 — Bulk Unsaver for Insta" /></picture></a>
+  <br />
+  <a href="https://vrajeshlabs.com/projects/bulk-unsaver-for-insta/"><img src="./assets/demo-bulk-unsaver.gif" width="100%" alt="Bulk Unsaver for Insta live demo clearing saved Instagram posts" /></a>
+</p>
+
+<p align="center">
+  <sub><code>JavaScript · MV3 · chrome.storage</code> &nbsp;·&nbsp; <a href="https://vrajeshlabs.com/projects/bulk-unsaver-for-insta/"><strong>Read Case Study →</strong></a> &nbsp;·&nbsp; <a href="https://chromewebstore.google.com/detail/bulk-unsaver-for-insta/jkkbfimmfiegakhkknnlolfgkhljggai"><strong>Chrome Web Store ↗</strong></a></sub>
+</p>
 
 ---
 

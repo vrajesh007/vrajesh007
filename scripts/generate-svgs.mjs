@@ -205,21 +205,19 @@ function renderButton(btn, themeName) {
 </svg>`;
 }
 
-const CARDS = [
+const CHAPTERS = [
   {
     fileIndex: '01',
     index: '01',
     status: 'GOOGLE PLAY · LIVE',
     title: 'Audio Rewind',
     category: 'ANDROID · WEAR OS · AI',
-    line1: 'Rolling 15s or 30s audio window in memory on Wear OS',
-    line2: 'and Android, ready to replay and transcribe.',
+    pitch: 'Rolling 15s or 30s audio window in memory on Wear OS and Android.',
     highlights: [
-      { value: '15s / 30s', label: 'In-memory window' },
-      { value: 'Zero alloc', label: 'Preallocated buffer' },
+      { value: '15s / 30s', label: 'In-memory' },
+      { value: 'Zero alloc', label: 'Ring buffer' },
       { value: 'Watch + Phone', label: 'Either owns mic' },
     ],
-    footerTech: 'Kotlin · Wearable APIs · Device E2E',
   },
   {
     fileIndex: '02',
@@ -227,14 +225,12 @@ const CARDS = [
     status: 'CWS · V1.1.0 CANDIDATE',
     title: 'GPhotos Unleashed',
     category: 'CHROME EXTENSION · LOCAL-FIRST',
-    line1: 'Organize Google Photos via exact-photo previews,',
-    line2: 'confirmed batches, and verified recovery receipts.',
+    pitch: 'Exact-photo previews, confirmed batches, and verified recovery receipts.',
     highlights: [
-      { value: '9 src · 23 ops', label: 'Preview before write' },
-      { value: 'IndexedDB', label: 'Readback & undo' },
-      { value: '1M-item gate', label: 'Bounded local queue' },
+      { value: '9 src · 23 ops', label: 'Preview first' },
+      { value: 'IndexedDB', label: 'Readback undo' },
+      { value: '1M-item gate', label: 'Bounded queue' },
     ],
-    footerTech: 'JavaScript · MV3 · Playwright',
   },
   {
     fileIndex: '03',
@@ -242,14 +238,12 @@ const CARDS = [
     status: 'WEB + MV3 · IN PROGRESS',
     title: 'May The Job Be With You',
     category: 'CHROME EXTENSION · TYPESCRIPT',
-    line1: 'Side Panel assistant mapping job forms from a',
-    line2: 'browser-local profile with confidence scoring.',
+    pitch: 'Side Panel assistant mapping forms from a browser-local profile.',
     highlights: [
-      { value: 'Local-only', label: 'IndexedDB profile' },
-      { value: 'Confidence', label: 'Uncertain flagged' },
-      { value: 'Manual submit', label: 'Never auto-submits' },
+      { value: 'Local-only', label: 'IndexedDB' },
+      { value: 'Confidence', label: 'Flags uncertain' },
+      { value: 'Manual submit', label: 'Never submits' },
     ],
-    footerTech: 'TypeScript · Vite · Dexie',
   },
   {
     fileIndex: '04',
@@ -257,70 +251,61 @@ const CARDS = [
     status: 'CHROME WEB STORE · LIVE',
     title: 'Bulk Unsaver for Insta',
     category: 'CHROME EXTENSION · AUTOMATION',
-    line1: 'Clears large Instagram Saved collections across',
-    line2: 'tab switches, with progress saved on every step.',
+    pitch: 'Clears large Instagram Saved collections across tab switches.',
     highlights: [
-      { value: 'Background', label: 'Across tab switches' },
-      { value: 'Resumable', label: 'Saved every step' },
-      { value: 'Locale-safe', label: 'DOM structure keys' },
+      { value: 'Background', label: 'Tab switches' },
+      { value: 'Resumable', label: 'Every step' },
+      { value: 'Locale-safe', label: 'DOM structure' },
     ],
-    footerTech: 'JavaScript · MV3 · chrome.storage',
   },
 ];
 
-function renderCard(card, themeName) {
+function renderChapter(ch, themeName) {
   const t = THEMES[themeName];
-  const badgeWidth = Math.max(112, Math.round(card.status.length * 6.4 + 20));
-  const colPositions = [24, 152, 280];
+  const badgeWidth = Math.max(112, Math.round(ch.status.length * 6.4 + 20));
+  const categoryX = 52 + badgeWidth + 14;
+  const colPositions = [510, 616, 722];
 
-  const highlightNodes = card.highlights
+  const highlightNodes = ch.highlights
     .map((h, idx) => {
       const x = colPositions[idx];
-      return `  <text x="${x}" y="180" font-family="${FONTS.mono}" font-size="11.5" font-weight="600" fill="${t.accent}">${esc(h.value)}</text>
-  <text x="${x}" y="197" font-family="${FONTS.sans}" font-size="10.5" fill="${t.muted}">${esc(h.label)}</text>`;
+      return `  <text x="${x}" y="72" font-family="${FONTS.mono}" font-size="11.2" font-weight="600" fill="${t.accent}">${esc(h.value)}</text>
+  <text x="${x}" y="91" font-family="${FONTS.sans}" font-size="10.5" fill="${t.muted}">${esc(h.label)}</text>`;
     })
     .join('\n');
 
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="420" height="260" viewBox="0 0 420 260" role="img" aria-label="${esc(card.title)} — ${esc(card.category)}">
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="840" height="118" viewBox="0 0 840 118" role="img" aria-label="${esc(ch.title)} — ${esc(ch.category)}">
   <defs>
-    <linearGradient id="card-bg-${card.fileIndex}-${themeName}" x1="0" y1="0" x2="1" y2="1">
+    <linearGradient id="ch-bg-${ch.fileIndex}-${themeName}" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="${t.bgStart}"/>
       <stop offset="100%" stop-color="${t.bgEnd}"/>
     </linearGradient>
-    <clipPath id="card-clip-${card.fileIndex}-${themeName}">
-      <rect x="0.5" y="0.5" width="419" height="259" rx="12"/>
+    <clipPath id="ch-clip-${ch.fileIndex}-${themeName}">
+      <rect x="0.5" y="0.5" width="839" height="117" rx="12"/>
     </clipPath>
   </defs>
 
-  <g clip-path="url(#card-clip-${card.fileIndex}-${themeName})">
-    <rect x="0" y="0" width="420" height="260" fill="url(#card-bg-${card.fileIndex}-${themeName})"/>
+  <g clip-path="url(#ch-clip-${ch.fileIndex}-${themeName})">
+    <rect x="0" y="0" width="840" height="118" fill="url(#ch-bg-${ch.fileIndex}-${themeName})"/>
   </g>
-  <rect x="0.5" y="0.5" width="419" height="259" rx="12" fill="none" stroke="${t.border}" stroke-width="1"/>
+  <rect x="0.5" y="0.5" width="839" height="117" rx="12" fill="none" stroke="${t.border}" stroke-width="1"/>
 
   <!-- Top metadata bar -->
-  <text x="24" y="34" font-family="${FONTS.mono}" font-size="11.5" font-weight="600" fill="${t.accent}" letter-spacing="0.8">${esc(card.index)}</text>
-  <rect x="48" y="20" width="${badgeWidth}" height="20" rx="10" fill="${t.pillBg}" stroke="${t.pillBorder}" stroke-width="0.8"/>
-  <text x="${48 + badgeWidth / 2}" y="33.5" text-anchor="middle" font-family="${FONTS.mono}" font-size="9.2" font-weight="600" fill="${t.pillText}" letter-spacing="0.5">${esc(card.status)}</text>
-  <text x="396" y="33.5" text-anchor="end" font-family="${FONTS.mono}" font-size="9.5" fill="${t.muted}" letter-spacing="0.7">PRIVATE SOURCE</text>
+  <text x="26" y="29" font-family="${FONTS.mono}" font-size="11.5" font-weight="600" fill="${t.accent}" letter-spacing="0.8">${esc(ch.index)}</text>
+  <rect x="52" y="15" width="${badgeWidth}" height="20" rx="10" fill="${t.pillBg}" stroke="${t.pillBorder}" stroke-width="0.8"/>
+  <text x="${52 + badgeWidth / 2}" y="28.5" text-anchor="middle" font-family="${FONTS.mono}" font-size="9.2" font-weight="600" fill="${t.pillText}" letter-spacing="0.5">${esc(ch.status)}</text>
+  <text x="${categoryX}" y="28.5" font-family="${FONTS.mono}" font-size="10" fill="${t.muted}" letter-spacing="0.8">${esc(ch.category)}</text>
+  <text x="814" y="28.5" text-anchor="end" font-family="${FONTS.mono}" font-size="9.5" fill="${t.muted}" letter-spacing="0.7">PRIVATE SOURCE</text>
 
-  <!-- Title & category -->
-  <text x="24" y="76" font-family="${FONTS.serif}" font-size="24" font-weight="400" fill="${t.ink}" letter-spacing="-0.4">${esc(card.title)}</text>
-  <text x="24" y="96" font-family="${FONTS.mono}" font-size="10" fill="${t.accent}" letter-spacing="0.9">${esc(card.category)}</text>
+  <line x1="26" y1="43" x2="814" y2="43" stroke="${t.divider}" stroke-width="1"/>
 
-  <!-- Two-line pitch -->
-  <text x="24" y="124" font-family="${FONTS.sans}" font-size="12.5" fill="${t.ink2}">${esc(card.line1)}</text>
-  <text x="24" y="142" font-family="${FONTS.sans}" font-size="12.5" fill="${t.ink2}">${esc(card.line2)}</text>
+  <!-- Title + 1-line pitch -->
+  <text x="26" y="72" font-family="${FONTS.serif}" font-size="22.5" font-weight="400" fill="${t.ink}" letter-spacing="-0.4">${esc(ch.title)}</text>
+  <text x="26" y="95" font-family="${FONTS.sans}" font-size="12" fill="${t.ink2}">${esc(ch.pitch)}</text>
 
-  <line x1="24" y1="158" x2="396" y2="158" stroke="${t.divider}" stroke-width="1"/>
-
-  <!-- 3-column invariants -->
+  <!-- Vertical divider + 3-column invariant strip -->
+  <line x1="494" y1="54" x2="494" y2="102" stroke="${t.divider}" stroke-width="1"/>
 ${highlightNodes}
-
-  <line x1="24" y1="214" x2="396" y2="214" stroke="${t.divider}" stroke-width="1"/>
-
-  <!-- Footer -->
-  <text x="24" y="238" font-family="${FONTS.mono}" font-size="10.2" fill="${t.muted}">${esc(card.footerTech)}</text>
-  <text x="396" y="238" text-anchor="end" font-family="${FONTS.sans}" font-size="11.5" font-weight="600" fill="${t.accent}">Case study ↗</text>
 </svg>`;
 }
 
@@ -476,8 +461,8 @@ for (const themeName of ['dark', 'light']) {
   for (const btn of BUTTONS) {
     writeSvg(`btn-${btn.id}-${themeName}.svg`, renderButton(btn, themeName));
   }
-  for (const card of CARDS) {
-    writeSvg(`card-${card.fileIndex}-${themeName}.svg`, renderCard(card, themeName));
+  for (const ch of CHAPTERS) {
+    writeSvg(`chapter-${ch.fileIndex}-${themeName}.svg`, renderChapter(ch, themeName));
   }
   writeSvg(`stack-${themeName}.svg`, renderStack(themeName));
   writeSvg(`footer-${themeName}.svg`, renderFooter(themeName));
